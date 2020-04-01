@@ -1,1 +1,31 @@
 
+from keras.models import Sequential
+from keras.layers import Flatten, LSTM
+from keras.layers.core import Activation, Dropout, Dense
+
+# ---
+# baseline
+
+import tensorflow as tf 
+from tensorflow import keras 
+
+with tf.Session() as sess: # you have to print values like this
+    init = tf.global_variables_initializer()
+    sess.run(init)
+    print(np.mean(keras.losses.mean_squared_error(y_valid.iloc[1:], y_valid.shift(1).iloc[1:]).eval()))
+
+np.square(np.subtract(y_valid.iloc[1:], y_valid.shift(1).iloc[1:])).mean() 
+np.square(np.subtract(y_valid, y_valid.mean())).mean() 
+
+# ---
+# train 0 - simple RNN
+
+model = keras.models.Sequential([
+    keras.layers.SimpleRNN(20,  input_shape=[1, k_features]), 
+    # num of parameters: (num_features + num_neurons)* num_neurons + biases
+    keras.layers.Dense(1) 
+    # num of parameters: num_neurons + biases
+])     
+    
+model.compile(optimizer='adam', loss='mse')
+print(model.summary())
