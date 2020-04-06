@@ -399,4 +399,4 @@ print(model.summary())
 
     
 history = model.fit(X_train, y_train, epochs=50, 
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid)) 
