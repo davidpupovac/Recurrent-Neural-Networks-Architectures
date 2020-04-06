@@ -69,7 +69,7 @@ X_test = np.array(X_test).reshape(1000, 1, k_features)
 # Baseline
 
 import tensorflow as tf 
-from tensorflow import keras 
+from tensorflow import keras
 
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
