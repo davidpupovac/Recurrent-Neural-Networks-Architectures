@@ -134,7 +134,7 @@ model.compile(optimizer='adam', loss='mse')
 print(model.summary())
 
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid), shuffle=True)
 
 # =============================================================================
 # train 2  - Bidirectional LSTM
@@ -168,7 +168,7 @@ model.compile(optimizer='adam', loss='mse')
 print(model.summary())
 
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid), shuffle=True)
 
 # =============================================================================
 # train 4 - Conv1D-LTSM - Convolutional layer to LSTM
@@ -188,7 +188,7 @@ model = Model(inputs=input_layer, outputs=output_layer)
 model.summary()
 model.compile(optimizer='adam', loss='mse')
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid), shuffle=True)
 
 import matplotlib.pyplot as plt
 plt.plot(history.history["loss"])
@@ -223,7 +223,7 @@ print(model.summary())
 model.compile(optimizer='adam', loss='mse')
 
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid), shuffle=True)
 
 import matplotlib.pyplot as plt
 
@@ -247,4 +247,4 @@ print(model.summary())
 
 model.compile(optimizer='adam', loss='mse')
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
-                    validation_data=(X_valid, y_valid))
+                    validation_data=(X_valid, y_valid), shuffle=True)
