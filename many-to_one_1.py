@@ -8,7 +8,7 @@
 
                 Many (time step) to one (time step) sequence  
                 
- (Multiple features, many time steps -> single output features, single step)
+ (Multiple features, many time steps -> single output feature, single step)
  
                                 
 """
