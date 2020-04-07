@@ -8,7 +8,7 @@
 
                 Many (time step) to one (time step) sequence  
                 
- (Multiple features, many time steps -> single output feature, single step)
+ (Multiple features, many time steps -> single output feature, single time step)
  
                                 
 """
@@ -184,12 +184,6 @@ y_test_pred = model.predict(X_test_pred)
 y_test_pred = np.array(y_test_pred).reshape(test_shape)
 np.square(np.subtract(y_test, y_test_pred)).mean() 
 
-np.corrcoef(y_test, y_test_pred)
-
-plt.plot(np.cumsum(y_test))
-plt.plot(np.cumsum(y_test_pred))
-y_test.mean()
-
 # =============================================================================
 # train 4  WaveNet-like 
 
@@ -228,7 +222,7 @@ model.add(keras.layers.InputLayer(input_shape=[time_steps, k_features]))
 for rate in (1, 2, 4, 8) * 2:
     model.add(keras.layers.Conv1D(filters=20, kernel_size=2, padding="valid",
                                   activation="relu", dilation_rate=rate, kernel_initializer=init))
-model.add(keras.layers.Flatten())
+model.add(keras.layers. LSTM(16))
 model.add(keras.layers.Dense(1, kernel_initializer=init))
 
 print(model.summary()) 
