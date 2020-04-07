@@ -137,7 +137,26 @@ history = model.fit(X_train, y_train, epochs=10, verbose=1,
                     validation_data=(X_valid, y_valid))
 
 # =============================================================================
-# train 2 - GRU - Gated Recurrent Unit 
+# train 2  - Bidirectional LSTM
+
+from keras.layers import Bidirectional
+
+model = Sequential()
+model.add(Bidirectional(LSTM(50, activation='relu'), input_shape=(time_steps, k_features)))
+model.add(Dense(1))
+model.compile(optimizer='adam', loss='mse')
+
+print(model.summary())
+
+history = model.fit(X_train, y_train, epochs=10, verbose=1,
+                    validation_data=(X_valid, y_valid))
+
+# predict
+test_output = model.predict(X_test, verbose=0)
+print(test_output)
+
+# =============================================================================
+# train 3 - GRU - Gated Recurrent Unit 
 
 import keras # for keras.layers.GRU to work, you can specify it in other ways
 
@@ -152,7 +171,7 @@ history = model.fit(X_train, y_train, epochs=10, verbose=1,
                     validation_data=(X_valid, y_valid))
 
 # =============================================================================
-# train 3a - Conv1D-LTSM works - Convolutional layer to LSTM
+# train 4 - Conv1D-LTSM works - Convolutional layer to LSTM
 
 from keras.layers import Input, Dense, Conv1D, Flatten
 from keras.models import Model
@@ -171,7 +190,6 @@ model.compile(optimizer='adam', loss='mse')
 history = model.fit(X_train, y_train, epochs=10, verbose=1,
                     validation_data=(X_valid, y_valid))
 
-
 import matplotlib.pyplot as plt
 plt.plot(history.history["loss"])
 plt.plot(history.history["val_loss"])
@@ -185,7 +203,7 @@ y_test_pred = np.array(y_test_pred).reshape(test_shape)
 np.square(np.subtract(y_test, y_test_pred)).mean() 
 
 # =============================================================================
-# train 4  WaveNet-like 
+# train 5  WaveNet-like 
 
 import keras
 
@@ -213,7 +231,7 @@ plt.plot(history.history["loss"])
 plt.plot(history.history["val_loss"])
 
 # ----
-# train 4a  WaveNet-like - VarianceScaling
+# train 5a  WaveNet-like - VarianceScaling
 
 init = keras.initializers.VarianceScaling(scale=.1, mode='fan_avg', distribution='uniform')
 
