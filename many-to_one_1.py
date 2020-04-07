@@ -171,7 +171,7 @@ history = model.fit(X_train, y_train, epochs=10, verbose=1,
                     validation_data=(X_valid, y_valid))
 
 # =============================================================================
-# train 4 - Conv1D-LTSM works - Convolutional layer to LSTM
+# train 4 - Conv1D-LTSM - Convolutional layer to LSTM
 
 from keras.layers import Input, Dense, Conv1D, Flatten
 from keras.models import Model
