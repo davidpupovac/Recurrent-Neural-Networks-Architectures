@@ -7,9 +7,9 @@
 # -----------------------------------------------------------------------------
 """
 
-                One (time step) to one (time step) sequence  
+                       One (time step) to one (time step)  
 
- (Multiple features, single time step -> single output features, single step)
+ (Multiple features, single time step -> single output feature, single step)
                                 
 """
 # -----------------------------------------------------------------------------
