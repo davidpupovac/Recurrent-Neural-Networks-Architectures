@@ -6,7 +6,7 @@
 # -----------------------------------------------------------------------------
 """
 
-               Many (time step) to many (time step) sequence 1  
+                 Many (time steps) to many (time steps) 1  
                 
  (Multiple features, many time steps -> single output feature, many time steps)
  
