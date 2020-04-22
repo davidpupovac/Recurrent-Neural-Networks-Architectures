@@ -31,7 +31,7 @@ The following problem families and solutions are  addressed in the files:
 - Convolutional/LSTM (Conv1D-LTSM)
 - WaveNet (Convolutional layers with dilation rates) 
 
-#### [Many to_many sequences problems: multiple features, many time steps -> single output feature, many time steps](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_many_1.py)
+#### [Many to_many sequences problems: Multiple features, many time steps -> single output feature, many time steps](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_many_1.py)
 - Long Short-Term Memory (LSTM) without TimeDistributed wrapper
 - LSTM with TimeDistributed wrapper
 - Gated Recurrent Unit (GRU) with TimeDistributed wrapper 
