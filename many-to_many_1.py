@@ -59,7 +59,7 @@ X_valid, y_valid = X[train_size: train_size+valid_size,:,:], y[train_size:train_
 X_test, y_test = X[train_size+valid_size:len(X)], y[train_size+valid_size:len(X)]
 
 # =============================================================================
-# train 1 - Solution via Simple LSTM - does not uses the TimeDistributed wrapper 
+# train 1 - Solution via Simple LSTM - does not use the TimeDistributed wrapper 
 
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
