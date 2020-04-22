@@ -11,27 +11,27 @@ The set of files in the repository demonstrates how to implement some of the ava
 
 The following problem families and solutions are  addressed in the files: 
 
-#### [Multiple features, single time step -> single output feature, single time step]( https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/one-to_one_1.py)
+#### [One to_one sequences problems: Multiple features, single time step -> single output feature, single time step]( https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/one-to_one_1.py)
 - Simple Recurrent Neural Networks
 - Long Short-Term Memory (LSTM) 
 - LSTM with peephole connection
 - Gated Recurrent Unit (GRU) 
 
-#### [Multiple features, many time steps -> single output feature, single time step]( https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_one_1.py) 
+#### [Many to_one sequences problems 1: Multiple features, many time steps -> single output feature, single time step]( https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_one_1.py) 
 - Long Short-Term Memory (LSTM) 
 - Bidirectional LSTM
 - Gated Recurrent Unit (GRU) 
 - Convolutional/LSTM (Conv1D-LTSM)
 - WaveNet (Convolutional layers with dilation rates)
 
-#### [Multiple features, many time steps -> multiple output features, single time step](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_one_2.py) 
+#### [Many to_one sequences problems 2: Multiple features, many time steps -> multiple output features, single time step](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_one_2.py) 
 - Long Short-Term Memory (LSTM) 
 - Bidirectional LSTM
 - Gated Recurrent Unit (GRU) 
 - Convolutional/LSTM (Conv1D-LTSM)
 - WaveNet (Convolutional layers with dilation rates) 
 
-#### [Multiple features, many time steps -> single output feature, many time steps](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_many_1.py)
+#### [Many to_many sequences problems: multiple features, many time steps -> single output feature, many time steps](https://github.com/davidpupovac/Recurrent-Neural-Networks-Architectures-in-Keras/blob/master/many-to_many_1.py)
 - Long Short-Term Memory (LSTM) without TimeDistributed wrapper
 - LSTM with TimeDistributed wrapper
 - Gated Recurrent Unit (GRU) with TimeDistributed wrapper 
